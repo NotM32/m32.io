@@ -2,11 +2,10 @@
 module.exports = {
   content: ["./templates/**/*.html"],
   theme: {
-    extend: {
-		fontFamily: {
-			inter: ["Inter", "sans-serif"]
-		}
-	}
+	  fontFamily: {
+		  sans: ["Inter", "sans-serif"],
+		  serif: ["Merriweather", "serif"]
+	  }
   },
   plugins: [],
 }
