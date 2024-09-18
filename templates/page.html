@@ -1,11 +1,19 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<div class="max-w-5xl mx-auto">
+<main class="max-w-5xl mx-auto">
+	<header>
+		{% include "blocks/navigation.html" %}
 
-	{% include "partials/navigation.html" %}
+		{% block mainheader %}
+		{% endblock %}
+	</header>
 
 	{% block content %}
 	{% endblock content %}
-</div>
+
+	{% block footer %}
+	{% include "blocks/footer.html" %}
+	{% endblock %}
+</main>
 {% endblock body %}

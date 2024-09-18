@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+@layer base {
+	article.markdown[role="main"] {
+		@apply font-serif;
+		@apply max-w-prose;
+		@apply mx-auto;
+		@apply antialiased;
+		@apply dark:text-white;
+
+		h1 {
+			@apply text-5xl;
+			@apply font-semibold;
+			@apply pb-4;
+		}
+		h2 {
+			@apply text-3xl;
+			@apply font-semibold;
+			@apply pb-2;
+		}
+		h3 {
+			@apply text-2xl;
+			@apply font-semibold;
+			@apply pb-2;
+		}
+		h4 {
+			@apply text-xl;
+			@apply font-semibold;
+			@apply pb-2;
+		}
+		h5 {
+			@apply text-lg;
+			@apply font-semibold;
+			@apply pb-2;
+		}
+		h6 {
+			@apply text-lg;
+			@apply font-medium;
+			@apply pb-2;
+		}
+		p {
+			@apply indent-8;
+			@apply text-pretty;
+			@apply hyphens-auto;
+			@apply leading-relaxed;
+			@apply break-words;
+
+			@apply tabular-nums;
+			@apply ordinal;
+			@apply slashed-zero;
+
+			@apply pb-4;
+		}
+		blockquote {
+			@apply opacity-80;
+			@apply bg-neutral-100;
+			@apply dark:bg-neutral-800;
+			@apply border-l-8;
+			@apply border-neutral-800;
+			@apply dark:border-neutral-100;
+			@apply mb-4;
+
+			p {
+				@apply indent-0;
+				@apply whitespace-pre-line;
+				@apply pl-4;
+				@apply py-2;
+			}
+		}
+		hr {
+			@apply h-0.5;
+			@apply mb-8;
+			@apply mt-4;
+			@apply mx-8;
+			@apply bg-neutral-200;
+			@apply dark:bg-neutral-600;
+			@apply border-none;
+		}
+		ul {
+			@apply pb-4;
+
+			li::before {
+				content: "⇒";
+				font-weight: 600;
+				display: inline-block;
+				width: 20px;
+			}
+
+			ul {
+				@apply pb-0;
+				@apply pl-4;
+			}
+		}
+	}
+}

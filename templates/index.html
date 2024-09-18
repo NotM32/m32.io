@@ -1,10 +1,30 @@
+{% import "macros.html" as macros %}
 {% extends "page.html" %}
 
 {% block content %}
-<section class="max-w-7xl mx-auto">
-<h1 class="font-inter">
-	test
-</h1>
-<h2>test</h2>
+<section class="pt-8 px-4 pb-4 4xl:px-0">
+	<header class="flex sm:flex-row flex-col-reverse items-center sm:w-full w-fit mx-auto xl:px-16 lg:px-12 px-8 select-none">
+		<h2 class="sm:text-start text-center grow text-3xl font-semibold dark:text-neutral-100">
+			M32
+			<p class="text-xl font-light text-black/50 dark:text-neutral-100/70">Engineering things.</p>
+		</h2>
+		<img class="w-48 rounded-full mx-4 mb-4" src="{{get_url(path='img/headshot.jpg',cachebust=true)}}" />
+		{% block header %}
+		{% endblock header %}
+	</header>
+
+	<section class="pb-4">
+		<h3 class="font-semibold text-2xl dark:text-neutral-100 select-none">Articles</h3>
+		<hr class="h-1 border-none bg-gradient-to-r from-orange-600 via-rose-900 to-orange-600" />
+
+		<div class="grid grid-cols-1 md:grid-cols-2 pt-4 gap-4 align-items-center">
+			{% set article_section = get_section(path="articles/_index.md") %}
+
+			{% for page in article_section.pages %}
+			{{ macros::article_card(page=page) }}
+			{% endfor %}
+		</div>
+	</section>
+
 </section>
 {% endblock content %}

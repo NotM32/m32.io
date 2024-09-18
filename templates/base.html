@@ -8,18 +8,24 @@
     {% set meta_author = config.extra.author %}
 
     {% if page %}
-    {% set meta_title = page.title ~ ' - ' ~ config.title %}
-    {% set meta_description = page.description %}
-    {% if page.extra.static_image_path %}
-    {% set img_path = page.extra.static_image_path %}
-    {% endif %}
+        {% set meta_title = page.title ~ ' - ' ~ config.title %}
+        {% set meta_description = page.description %}
+        {% if page.extra.static_image_path %}
+            {% set img_path = page.extra.static_image_path %}
+        {% endif %}
 
-    {% if page.extra.keywords %}
-    {% set meta_keywords = meta_keywords | concat(with=page.extra.keywords) %}
-    {% endif %}
-    {% else %}
-    {% set meta_title = config.title %}
-    {% set meta_description = config.description %}
+        {% if page.extra.keywords %}
+            {% set meta_keywords = meta_keywords | concat(with=page.extra.keywords) %}
+        {% endif %}
+
+    {% elif section.title %}
+	    {% set meta_title = section.title ~ ' - ' ~ config.title %}
+        {% set meta_description = section.description %}
+
+	{% else %}
+
+        {% set meta_title = config.title %}
+        {% set meta_description = config.description %}
     {% endif %}
 
     <title>{{ meta_title }}</title>
@@ -50,17 +56,15 @@
 
     <!-- Stylesheets -->
     <link href="{{get_url(path='styles/main.css',cachebust=true)}}" rel="stylesheet" type="text/css" />
-    <link href="{{get_url(path='base.css',cachebust=true)}}" rel="stylesheet" type="text/css" />
+    <link href="{{get_url(path='style.css',cachebust=true)}}" rel="stylesheet" type="text/css" />
 
     {% block head %}
     {% endblock head %}
 </head>
 
-<body>
-	<main class="dark:bg-neutral-800 min-h-screen  antialiased">
-		{% block body %}
-		{% endblock body %}
-	</main>
+<body class="antialiased min-h-screen dark:bg-neutral-900">
+	{% block body %}
+	{% endblock body %}
 </body>
 
 </html>
