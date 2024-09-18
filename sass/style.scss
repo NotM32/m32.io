@@ -5,12 +5,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
 @layer base {
-	article.markdown[role="main"] {
+	/* */
+	article.article {
 		@apply font-serif;
 		@apply max-w-prose;
 		@apply mx-auto;
 		@apply antialiased;
 		@apply dark:text-white;
+
+		header {
+			@apply flex items-end;
+
+			h1 {
+				@apply grow;
+				@apply pb-0;
+			}
+			time {
+				@apply indent-0;
+			}
+		}
 
 		h1 {
 			@apply text-5xl;
@@ -81,7 +94,7 @@
 			@apply border-none;
 		}
 		ul {
-			@apply pb-4;
+			@apply pl-4 pb-4;
 
 			li::before {
 				content: "⇒";
@@ -95,5 +108,6 @@
 				@apply pl-4;
 			}
 		}
+
 	}
 }

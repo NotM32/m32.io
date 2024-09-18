@@ -1,16 +1,20 @@
 {% macro article_card(page) %}
   <article class="flex max-w-xl flex-col">
     <div class="group relative">
-      <h3 class="flex flex-row mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+      <h3 class="flex flex-row mt-3 text-lg font-semibold leading-6 text-gray-800 dark:text-white group-hover:text-neutral-600 dark:group-hover:text-neutral-400">
         <a href="{{ page.permalink }}" class="grow">
           <span class="absolute inset-0"></span>
           {{ page.title }}
         </a>
-		<time datetime="{{ page.date }}" class="text-xs text-gray-500">{{ page.date | date(format="%b %d, %Y") }}</time>
+		<time datetime="{{ page.date }}" class="text-xs text-neutral-500">{{ page.date | date(format="%b %d, %Y") }}</time>
       </h3>
 		<hr class="h-1 border-none bg-gradient-to-r from-rose-900 from-20% to-50% to-orange-600" />
-      <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600 font-serif max-w-prose">
-		{{ page.content | split(pat="\n") | first | truncate(length=250) | safe }}
+      <p class="mt-5 line-clamp-3 text-sm leading-6 text-neutral-800 dark:text-neutral-200 font-serif max-w-prose">
+		{% if page.description %}
+		{{ page.description | truncate(length=250) | safe }}
+	  {% else %}
+		{{ page.content | split(pat="\n") | first | truncate(length=250) | striptags | safe }}
+	  {% endif %}
 	  </p>
     </div>
   </article>
