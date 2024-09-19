@@ -11,7 +11,8 @@
 		@apply max-w-prose;
 		@apply mx-auto;
 		@apply antialiased;
-		@apply dark:text-white;
+		@apply text-neutral-800;
+		@apply dark:text-neutral-100;
 
 		header {
 			@apply flex items-end;
@@ -27,33 +28,48 @@
 
 		h1 {
 			@apply text-5xl;
+			@apply dark:text-white;
 			@apply font-semibold;
 			@apply pb-4;
 		}
 		h2 {
 			@apply text-3xl;
+			@apply dark:text-white;
 			@apply font-semibold;
 			@apply pb-2;
 		}
 		h3 {
 			@apply text-2xl;
+			@apply dark:text-white;
 			@apply font-semibold;
 			@apply pb-2;
 		}
 		h4 {
 			@apply text-xl;
+			@apply dark:text-white;
 			@apply font-semibold;
 			@apply pb-2;
 		}
 		h5 {
 			@apply text-lg;
+			@apply dark:text-white;
 			@apply font-semibold;
 			@apply pb-2;
 		}
 		h6 {
 			@apply text-lg;
+			@apply dark:text-white;
 			@apply font-medium;
 			@apply pb-2;
+		}
+		hr {
+			@apply h-0.5;
+			@apply mb-8;
+			@apply mt-4;
+			@apply mx-8;
+			@apply bg-neutral-200;
+			@apply dark:bg-neutral-600;
+			@apply border-none;
 		}
 		p {
 			@apply indent-8;
@@ -84,14 +100,10 @@
 				@apply py-2;
 			}
 		}
-		hr {
-			@apply h-0.5;
-			@apply mb-8;
-			@apply mt-4;
-			@apply mx-8;
-			@apply bg-neutral-200;
-			@apply dark:bg-neutral-600;
-			@apply border-none;
+		pre {
+			@apply overflow-y-scroll;
+			@apply scroll-smooth;
+			@apply m-4;
 		}
 		ul {
 			@apply pl-4 pb-4;
