@@ -79,6 +79,13 @@
 			@apply slashed-zero;
 
 			@apply pb-4;
+
+			img {
+				@apply float-right;
+			}
+		}
+		a {
+			@apply text-orange-700 dark:text-orange-600;
 		}
 		blockquote {
 			@apply opacity-80;
@@ -105,15 +112,52 @@
 			@apply pl-4 pb-4;
 
 			li::before {
-				content: "⇒";
+				content: "\2192";
 				font-weight: 600;
 				display: inline-block;
 				width: 20px;
 			}
-
 			ul {
 				@apply pb-0;
 				@apply pl-4;
+			}
+		}
+		ol {
+			@apply pl-4 pb-4;
+			@apply list-decimal;
+
+			li::before {
+				font-weight: 600;
+				display: inline-block;
+			}
+
+			ol, ul {
+				@apply pb-0 pl-4;
+			}
+		}
+		table {
+			@apply table-auto border-collapse my-4;
+
+			thead {
+				@apply border-b-2 border-orange-600;
+
+				tr {
+					@apply divide-x divide-dashed divide-orange-600/50;
+					@apply border-t border-x border-neutral-200 dark:border-neutral-800;
+
+					th {
+						@apply border-orange-600 bg-orange-700/10 px-2 py-1 mx-2;
+
+					}
+				}
+			}
+			tbody {
+				tr {
+					td {
+						@apply border border-neutral-200 dark:border-neutral-800 px-4 py-1;
+						@apply bg-neutral-100 dark:bg-neutral-900/80;
+					}
+				}
 			}
 		}
 

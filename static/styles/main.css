@@ -629,6 +629,21 @@ article.article {
   p {
     padding-bottom: 1rem;
   }
+  p {
+    img {
+      float: right;
+    }
+  }
+  a {
+    --tw-text-opacity: 1;
+    color: rgb(194 65 12 / var(--tw-text-opacity));
+  }
+  @media (prefers-color-scheme: dark) {
+    a {
+      --tw-text-opacity: 1;
+      color: rgb(234 88 12 / var(--tw-text-opacity));
+    }
+  }
   blockquote {
     opacity: 0.8;
   }
@@ -694,7 +709,7 @@ article.article {
   }
   ul {
     li::before {
-      content: "⇒";
+      content: "\2192";
       font-weight: 600;
       display: inline-block;
       width: 20px;
@@ -704,6 +719,131 @@ article.article {
     }
     ul {
       padding-left: 1rem;
+    }
+  }
+  ol {
+    padding-left: 1rem;
+  }
+  ol {
+    padding-bottom: 1rem;
+  }
+  ol {
+    list-style-type: decimal;
+  }
+  ol {
+    li::before {
+      font-weight: 600;
+      display: inline-block;
+    }
+    ol, ul {
+      padding-bottom: 0px;
+    }
+    ol, ul {
+      padding-left: 1rem;
+    }
+  }
+  table {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  table {
+    table-layout: auto;
+  }
+  table {
+    border-collapse: collapse;
+  }
+  table {
+    thead {
+      border-bottom-width: 2px;
+    }
+    thead {
+      --tw-border-opacity: 1;
+      border-color: rgb(234 88 12 / var(--tw-border-opacity));
+    }
+    thead {
+      tr > :not([hidden]) ~ :not([hidden]) {
+        --tw-divide-x-reverse: 0;
+        border-right-width: calc(1px * var(--tw-divide-x-reverse));
+        border-left-width: calc(1px * calc(1 - var(--tw-divide-x-reverse)));
+      }
+      tr > :not([hidden]) ~ :not([hidden]) {
+        border-style: dashed;
+      }
+      tr > :not([hidden]) ~ :not([hidden]) {
+        border-color: rgb(234 88 12 / 0.5);
+      }
+      tr {
+        border-left-width: 1px;
+        border-right-width: 1px;
+      }
+      tr {
+        border-top-width: 1px;
+      }
+      tr {
+        --tw-border-opacity: 1;
+        border-color: rgb(229 229 229 / var(--tw-border-opacity));
+      }
+      @media (prefers-color-scheme: dark) {
+        tr {
+          --tw-border-opacity: 1;
+          border-color: rgb(38 38 38 / var(--tw-border-opacity));
+        }
+      }
+      tr {
+        th {
+          margin-left: 0.5rem;
+          margin-right: 0.5rem;
+        }
+        th {
+          --tw-border-opacity: 1;
+          border-color: rgb(234 88 12 / var(--tw-border-opacity));
+        }
+        th {
+          background-color: rgb(194 65 12 / 0.1);
+        }
+        th {
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+        }
+        th {
+          padding-top: 0.25rem;
+          padding-bottom: 0.25rem;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          border-width: 1px;
+        }
+        td {
+          --tw-border-opacity: 1;
+          border-color: rgb(229 229 229 / var(--tw-border-opacity));
+        }
+        td {
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+        td {
+          padding-top: 0.25rem;
+          padding-bottom: 0.25rem;
+        }
+        @media (prefers-color-scheme: dark) {
+          td {
+            --tw-border-opacity: 1;
+            border-color: rgb(38 38 38 / var(--tw-border-opacity));
+          }
+        }
+        td {
+          --tw-bg-opacity: 1;
+          background-color: rgb(245 245 245 / var(--tw-bg-opacity));
+        }
+        @media (prefers-color-scheme: dark) {
+          td {
+            background-color: rgb(23 23 23 / 0.8);
+          }
+        }
+      }
     }
   }
 }
@@ -922,6 +1062,10 @@ article.article {
   display: inline-flex;
 }
 
+.table {
+  display: table;
+}
+
 .grid {
   display: grid;
 }
@@ -1003,6 +1147,14 @@ article.article {
   flex-grow: 1;
 }
 
+.table-auto {
+  table-layout: auto;
+}
+
+.border-collapse {
+  border-collapse: collapse;
+}
+
 .scale-125 {
   --tw-scale-x: 1.25;
   --tw-scale-y: 1.25;
@@ -1069,6 +1221,16 @@ article.article {
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.divide-x > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-x-reverse: 0;
+  border-right-width: calc(1px * var(--tw-divide-x-reverse));
+  border-left-width: calc(1px * calc(1 - var(--tw-divide-x-reverse)));
+}
+
+.divide-dashed > :not([hidden]) ~ :not([hidden]) {
+  border-style: dashed;
+}
+
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1087,8 +1249,17 @@ article.article {
   border-width: 1px;
 }
 
+.border-x {
+  border-left-width: 1px;
+  border-right-width: 1px;
+}
+
 .border-b-2 {
   border-bottom-width: 2px;
+}
+
+.border-t {
+  border-top-width: 1px;
 }
 
 .border-none {
@@ -1100,6 +1271,11 @@ article.article {
   border-color: rgb(229 229 229 / var(--tw-border-opacity));
 }
 
+.border-orange-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(234 88 12 / var(--tw-border-opacity));
+}
+
 .border-orange-700 {
   --tw-border-opacity: 1;
   border-color: rgb(194 65 12 / var(--tw-border-opacity));
@@ -1108,6 +1284,10 @@ article.article {
 .bg-neutral-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(245 245 245 / var(--tw-bg-opacity));
+}
+
+.bg-orange-700\/10 {
+  background-color: rgb(194 65 12 / 0.1);
 }
 
 .bg-transparent {
@@ -1154,6 +1334,11 @@ article.article {
   padding: 1rem;
 }
 
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .px-2\.5 {
   padding-left: 0.625rem;
   padding-right: 0.625rem;
@@ -1172,6 +1357,11 @@ article.article {
 .py-0\.5 {
   padding-top: 0.125rem;
   padding-bottom: 0.125rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .py-2 {
