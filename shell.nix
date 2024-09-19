@@ -8,10 +8,12 @@ mkShell {
     # Perl
     rlwrap
     perl
+    perlPackages.GitRepository
+    perlPackages.Git
     perlPackages.CPAN
     perlPackages.PerlLanguageServer
     perlPackages.RESTClient
-    perlPackages.JSON
+    perlPackages.YAML
     perlPackages.DataDumper
 
     # bash
