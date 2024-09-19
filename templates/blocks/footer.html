@@ -15,5 +15,10 @@
       </a>
     </div>
     <p class="mt-10 text-center text-xs leading-5 text-neutral-500">&copy; 2024 Cubit Computer Ltd. All rights reserved.</p>
+	{% set data = load_data(path=".data.yml", format="yaml") %}
+	{% if data.git %}
+    <p class="mt-4 text-center text-xs leading-5 text-neutral-500">Build rev <a href="https://github.com/notm32/m32.io/commit/{{data.git.rev}}">{{ data.git.shortrev }}</a></p>
+	{% endif %}
+
 
 </footer>
