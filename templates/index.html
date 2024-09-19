@@ -4,21 +4,21 @@
 {% block content %}
 <section class="pt-8 px-4 pb-4 4xl:px-0">
 	<header class="flex sm:flex-row flex-col-reverse items-center sm:w-full w-fit mx-auto xl:px-16 lg:px-12 px-8 select-none">
-		<h2 class="sm:text-start text-center grow text-3xl font-semibold dark:text-neutral-100">
-			M32
-			<p class="text-xl font-light text-black/50 dark:text-neutral-100/70">Engineering things.</p>
-		</h2>
-		<img class="w-48 rounded-full mx-4 mb-4" src="{{get_url(path='img/headshot.jpg',cachebust=true)}}" />
+		<hgroup class="grow">
+			<h2 class="sm:text-start text-center grow text-3xl font-semibold dark:text-neutral-100">M32</h2>
+			<p class="text-xl font-light text-neutral-700 dark:text-neutral-200">Engineering things.</p>
+		</hgroup>
+		<img class="w-48 transition-all ease-in-out rounded-[96px] hover:rounded mx-4 mb-4" src="{{get_url(path='img/headshot.jpg',cachebust=true)}}" />
 		{% block header %}
 		{% endblock header %}
 	</header>
 
 	<section class="pb-4">
-		<h3 class="border-b-2 border-neutral-200 dark:border-neutral-800 font-semibold text-2xl dark:text-neutral-100 select-none">
+		<h3 class="border-b-2 border-neutral-200 dark:border-neutral-700 font-semibold text-2xl dark:text-neutral-100 select-none">
 			Articles
 		</h3>
 
-		<div class="grid grid-cols-1 md:grid-cols-2 pt-4 gap-4 align-items-center">
+		<div class="grid grid-cols-1 sm:grid-cols-2 py-4 gap-4 align-items-center">
 			{% set article_section = get_section(path="articles/_index.md") %}
 
 			{% for page in article_section.pages %}
@@ -27,5 +27,7 @@
 		</div>
 	</section>
 
+	<div class="grid md:grid-cols-3">
+	</div>
 </section>
 {% endblock content %}

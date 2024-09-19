@@ -5,7 +5,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
 @layer base {
-	/* */
 	article.article {
 		@apply font-serif;
 		@apply max-w-prose;
@@ -15,17 +14,14 @@
 		@apply dark:text-neutral-100;
 
 		header {
-			@apply flex items-end;
-
 			h1 {
-				@apply grow;
 				@apply pb-0;
 			}
-			time {
+			time, p {
 				@apply indent-0;
+				@apply pb-0
 			}
 		}
-
 		h1 {
 			@apply text-5xl;
 			@apply dark:text-white;
@@ -96,14 +92,14 @@
 			p {
 				@apply indent-0;
 				@apply whitespace-pre-line;
-				@apply pl-4;
-				@apply py-2;
+				@apply p-4;
+				@apply space-y-4;
 			}
 		}
 		pre {
 			@apply overflow-y-scroll;
 			@apply scroll-smooth;
-			@apply m-4;
+			@apply p-4 m-4;
 		}
 		ul {
 			@apply pl-4 pb-4;

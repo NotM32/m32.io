@@ -8,9 +8,22 @@
 
 {% block content %}
 <article role="main" class="article pt-8 px-4 lg:px-0">
-	<header>
-		<h1 class="grow">{{ page.title }}</h1>
-		<time class="text-neutral-600 dark:text-neutral-400" datetime="{{ page.date }}">{{ page.date }}</time>
+	<header class="flex items-end">
+		<hgroup class="grow">
+			<h1 id="article-title">{{ page.title }}</h1>
+			{% if page.description %}
+			<p id="description" class="text-neutral-600 dark:text-neutral-400">{{ page.description }}</p>
+			{% endif %}
+		</hgroup>
+
+		<div class="flex-none text-right text-neutral-600 dark:text-neutral-400">
+			<time datetime="{{ page.date }}">{{ page.date | date(format="%b %d, %Y") }}</time>
+			{% if page.updated %}
+			<p class="line-clamp-1">
+				<i>Updated</i> <time datetime="{{ page.updated }}">{{ page.updated | date(format="%b %d") }}</time>
+			</p>
+			{% endif %}
+		</div>
 	</header>
 	<hr class="!mx-0 !mt-2 !h-1.5 border-none bg-gradient-to-r from-rose-900 from-20% to-50% to-orange-600" />
 

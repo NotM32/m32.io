@@ -1,8 +1,11 @@
 +++
 title = "Intro Part 1"
 slug = "intro-1"
-date = 2024-09-19
+date = 2024-09-09
 description = "Pellentesque tristique imperdiet tortor."
+[taxonomies]
+tags=["networking"]
+languages=["elixir", "rust"]
 +++
 Sed id ligula quis est convallis tempor.
 

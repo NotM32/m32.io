@@ -11,14 +11,20 @@ compile_sass = true
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
+# Taxonomies
+taxonomies = [
+           { name = "tags", feed = true, render = false},
+           { name = "languages", feed = true, render = false}
+]
+
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = true
 highlight_theme="css"
 highlight_themes_css = [
-  { theme = "Tomorrow", filename = "syntax-theme-light.css" },
-  { theme = "boron", filename = "syntax-theme-dark.css" },
+                     { theme = "Tomorrow", filename = "syntax-theme-light.css" },
+                     { theme = "boron", filename = "syntax-theme-dark.css" },
 ]
 
 [extra]
