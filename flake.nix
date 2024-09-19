@@ -14,6 +14,7 @@
       perSystem = { pkgs, self', ... }: {
         devShells = {
           default = (import ./shell.nix) {
+            inherit pkgs;
             extraBuildInputs = [];
           };
         };
