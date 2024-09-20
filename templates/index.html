@@ -2,13 +2,13 @@
 {% extends "page.html" %}
 
 {% block content %}
-<section class="pt-8 px-4 pb-4 4xl:px-0">
+<section class="grow pt-8 px-4 pb-4 4xl:px-0">
 	<header class="flex sm:flex-row flex-col-reverse items-center sm:w-full w-fit mx-auto xl:px-16 lg:px-12 px-8 select-none">
 		<hgroup class="grow">
-			<h2 class="sm:text-start text-center grow text-3xl font-semibold dark:text-neutral-100">M32</h2>
-			<p class="text-xl font-light text-neutral-700 dark:text-neutral-200">Engineering things.</p>
+			<h2 class="md:text-start text-center grow text-3xl font-semibold dark:text-neutral-100">Riley C. O'Connor</h2>
+			<p class="md:text-start text-center text-xl font-light text-neutral-700 dark:text-neutral-200">m32.io</p>
 		</hgroup>
-		<img class="w-48 transition-all ease-in-out rounded-[96px] hover:rounded mx-4 mb-4" src="{{get_url(path='img/headshot.jpg',cachebust=true)}}" />
+		<img class="w-48 transition-all ease-in-out rounded-[96px] hover:rounded mx-4 mb-4 shadow-lg grayscale" src="{{get_url(path='img/headshot.jpg',cachebust=true)}}" />
 		{% block header %}
 		{% endblock header %}
 	</header>
