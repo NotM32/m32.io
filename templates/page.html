@@ -1,13 +1,10 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<main class="max-w-5xl mx-auto">
-	<header>
-		{% include "blocks/navigation.html" %}
-
-		{% block mainheader %}
-		{% endblock %}
-	</header>
+<main class="flex flex-col max-w-5xl mx-auto min-h-screen">
+	{% block mainheader %}
+	{% include "blocks/navigation.html" %}
+	{% endblock %}
 
 	{% block content %}
 	{% endblock content %}
