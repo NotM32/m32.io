@@ -2,7 +2,7 @@ const colors = require('tailwindcss/colors')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./templates/**/*.html", "./sass/**/*.{scss, sass, css}", "./static/**/*.{html, css}"],
+  content: ["./templates/**/*.html", "./sass/**/*.{scss, sass, css}", "./static/**/*.{html, css}", "./content/**/*.md"],
   theme: {
 	  fontFamily: {
 		  sans: ["Inter", "sans-serif"],

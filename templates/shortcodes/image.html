@@ -1,0 +1,3 @@
+<img
+	{% if src %}src="{{get_url(path=src,cachebust=true)}}"{% endif %}
+	{% if class %}class="{{class}}"{% endif %} />
