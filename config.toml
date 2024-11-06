@@ -3,7 +3,7 @@ base_url = "https://m32.io"
 
 # title / description used in feeds
 title = "m32.io"
-description = ""
+description = "Personal website of Riley C. OConnor"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
