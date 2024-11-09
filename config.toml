@@ -5,6 +5,8 @@ base_url = "https://m32.io"
 title = "m32.io"
 description = "Personal website of Riley C. OConnor"
 
+minify_html = true
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 

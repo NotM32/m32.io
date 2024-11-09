@@ -12,20 +12,20 @@
         {% set meta_description = page.description %}
         {% if page.extra.static_image_path %}
             {% set img_path = page.extra.static_image_path %}
-        {% endif %}
+    {% endif %}
 
-        {% if page.extra.keywords %}
-            {% set meta_keywords = meta_keywords | concat(with=page.extra.keywords) %}
-        {% endif %}
+    {% if page.extra.keywords %}
+    {% set meta_keywords = meta_keywords | concat(with=page.extra.keywords) %}
+    {% endif %}
 
     {% elif section.title %}
-	    {% set meta_title = section.title ~ ' - ' ~ config.title %}
-        {% set meta_description = section.description %}
+	{% set meta_title = section.title ~ ' - ' ~ config.title %}
+    {% set meta_description = section.description %}
 
 	{% else %}
 
-        {% set meta_title = config.title %}
-        {% set meta_description = config.description %}
+    {% set meta_title = config.title %}
+    {% set meta_description = config.description %}
     {% endif %}
 
     <title>{{ meta_title }}</title>
@@ -40,8 +40,12 @@
     <meta name="keywords" content="{{ meta_keywords | join(sep=', ') }}" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{get_url(path='favicons/favicon-16x16.png',
-                                            cachebust=true)}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{get_url(path='favicons/favicon-16x16.png', cachebust=true)}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{get_url(path='favicons/favicon-32x32.png', cachebust=true)}}">
+    <link rel="icon" type="image/png" sizes="64x64" href="{{get_url(path='favicons/favicon-64x64.png', cachebust=true)}}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{get_url(path='favicons/favicon-96x96.png', cachebust=true)}}">
+    <link rel="icon" type="image/svg" href="{{get_url(path='favicons/favicon.svg', cachebust=true)}}">
+
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
 
