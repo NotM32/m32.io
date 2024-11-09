@@ -1,0 +1,22 @@
+{% extends "page.html" %}
+
+{% block content %}
+{% if section %}
+<section class="grow pt-8 px-4 pb-4 4xl:px-0">
+	<hgroup class="flex items-end space-x-4 border-b-2 border-neutral-200 dark:border-neutral-800">
+		<h2 class="font-semibold text-4xl dark:text-neutral-100 select-none">
+			{{section.title}}
+		</h2>
+		{% if section.description %}
+		<p class="text-neutral-700 dark:text-neutral-200">
+			{{ section.description }}
+		</p>
+		{% endif %}
+	</hgroup>
+
+	<article class="section">
+		{{ section.content | safe }}
+	</article>
+</section>
+{% endif %}
+{% endblock content %}
