@@ -50,7 +50,8 @@ sub watch_zola {
 # Build Command
 sub build {
 	print "Building...\n";
-	fetch()
+	system("tailwindcss -i sass/style.scss -o static/styles/main.css");
+	system("zola build")
 }
 
 # Fetch Command
