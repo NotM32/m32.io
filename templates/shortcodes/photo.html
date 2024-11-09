@@ -1,22 +1,24 @@
 {% set classes = "" %}
-
+{% if clear is not defined %}{% set clear = true %}{% endif %}
 {% if align == 'center' %}
-  {% set classes = classes ~ " md:mx-auto md:my-2" %}
+  {% set classes = classes ~ " md:mx-auto my-2" %}
   {% set classes = classes ~ " max-h-96" %}
 {% elif align %}
-  {% set classes = classes ~ " md:w-1/3" %}
-  {% set classes = classes ~ " md:mx-4 md:my-2" %}
+  {% if grid is not defined %}{% set classes = classes ~ " md:w-1/3" %}{% endif %}
+  {% set classes = classes ~ " md:mx-4 my-2" %}
 
   {% if align == "right" %}
     {% set classes = classes ~ " md:mr-0" %}
     {% set classes = classes ~ " md:float-right" %}
-    {% set classes = classes ~ " md:clear-right" %}
+    {% if clear %}{% set classes = classes ~ " md:clear-right" %}{% endif %}
   {% elif align == "left" %}
     {% set classes = classes ~ " md:ml-0" %}
     {% set classes = classes ~ " md:float-left" %}
-    {% set classes = classes ~ " md:clear-left" %}
+    {%if clear %}{% set classes = classes ~ " md:clear-left" %}{% endif %}
   {% endif %}
 {% endif %}
+
+{% if grid %}{% set classes = classes ~ " md:w-5/12" %}{% endif %}
 
 {% if class %}{% set classes = classes ~ " " ~ class %}{% endif %}
 

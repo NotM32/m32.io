@@ -2,7 +2,6 @@
 title = "About"
 template = "simple.html"
 +++
-{{ image(src='/img/scotsfest_blunderbuss.jpg', class='w-auto w-52 h-52 object-fit overflow-clip md:w-52 md:h-auto mx-auto md:mx-4 rounded md:float-right shadow-lg transition xl:hover:scale-[2]')}}
 
 I am an independent datacenter operator, network engineer, and software developer building distributed systems using Rust, Erlang and Elixir. I live in the Colorado mountains, outside of the Denver metro.
 
@@ -12,4 +11,15 @@ I am an advocate for libre software and the support efforts of the [FSF](https:/
 
 Find me on [GitHub](https://github.com/notm32) and [LinkedIn](https://linkedin.com/in/m32).
 
+## Photos
+{{ photo(src='img/headshot.jpg', align='left' clear=false, grid=true, alt='me with a blunderbuss at a tartan festival') }}
 
+{{ photo(src='img/eloped.jpg', align='right', clear=false, grid=true, alt='me and my wife at our elopement') }}
+
+{{ photo(src='img/scotsfest_blunderbuss.jpg', align='left' clear=false, grid=true, alt='me with a blunderbuss at a tartan festival') }}
+
+{{ photo(src='img/stanley_cup.jpg', align='right', clear=false, grid=true, alt='me next to the stanley cup') }}
+
+{{ photo(src='img/jane_me_yos1.jpg', align='left', clear=false, grid=true, alt='me and my wife at our elopement') }}
+
+{{ photo(src='img/on_bridge.jpg', align='right', clear=false, grid=true, alt='me at rocky mountain national park') }}
