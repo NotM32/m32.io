@@ -62,7 +62,7 @@
             ''
               #!/bin/sh
               fetch_data () {
-                         cp $(nix build .#data-file --no-link --print-out-paths) $PWD/.nix-data.json
+                         cp $(${pkgs.nix}/bin/nix build .#data-file --no-link --print-out-paths) $PWD/.nix-data.json
               }
 
               cleanup () {
@@ -74,10 +74,11 @@
               fetch_data
 
               echo "Starting Tailwind watch process"
-	            tailwindcss -i sass/style.scss -o static/styles/main.css --watch &
+	            ${pkgs.tailwindcss}/bin/tailwindcss -i sass/style.scss -o static/styles/main.css --watch &
+              sleep 2
 
               echo "Starting Zola watch process"
-              zola serve &
+              ${pkgs.zola}/bin/zola serve &
 
               while true; do
                     fetch_data
