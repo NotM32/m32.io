@@ -2,7 +2,7 @@
 title = "Contact"
 template = "simple.html"
 +++
-{{ image(src='img/stanley_cup.jpg', class='w-auto md:w-56 mx-auto md:mx-4 rounded clear-right md:float-right shadow-lg transition hover:scale-[2]')}}
+{{ photo(src='img/stanley_cup.jpg', align='right', alt='me with the stanley cup at the hockey hall of fame') }}
 
 I like to hear from new people. While my bandwidth is at a premium, I will get back to you if you write. You can reach me through email, [hello@m32.io](mailto:hello@m32.io) - I will do my best to get back to you in a timely manner.
 
@@ -26,13 +26,13 @@ I am willing to adapt however, and can also be reached on
 - Wire
 
 ## Conferences
-{{ image(src='img/n92_2.jpg', class='w-auto md:w-72 mx-auto md:mx-4 rounded md:float-left shadow-lg transition hover:scale-[2]')}}
+{{ photo(src='img/n92_2.jpg', align='left', alt='me with a buddy at NANOG92 lunch') }}
 
 I've really enjoyed attending these in-person events. [NANOG](https://nanog.org) has really been impactful for me. Attending through the ARIN fellowship as a long time lurker of the NANOG mailing list was an exceptional experiance and I'd advise anyone at any stage in their career to attend these meetings if they're trying to broaden their network.
 
-{{ image(src='img/n92_1.jpg', class='w-auto md:w-72 mx-auto md:mx-4 rounded clear-left md:float-right shadow-lg transition hover:scale-[2]')}}
-
 I aim to be a frequent attendee of [NANOG](https://nanog.org), where travel costs permit. 
+
+{{ photo(src='img/n92_1.jpg', align='right', alt='me listening to a talk') }}
 
 This year, I attended [ARIN54](https://arin.net/arin54) in Toronto as an ARIN Fellow. I try to attend these policy meetings virtually at the very least, in person when convenient.
 
