@@ -1,3 +1,11 @@
+# tools
 .direnv/
 .vscode/
+
+# data files
 .data.yml
+.nix-data.yml
+
+# nix
+result
+result/
