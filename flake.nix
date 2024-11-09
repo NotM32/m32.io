@@ -15,7 +15,7 @@
           # * The static website files as a package
           static = stdenv.mkDerivation rec {
             pname = "m32.io-static";
-            version = "${self.short-rev or self.dirtyShortRev}";
+            version = "${self.shortRev or self.dirtyShortRev}";
             src = self;
 
             buildInputs = with pkgs; [
