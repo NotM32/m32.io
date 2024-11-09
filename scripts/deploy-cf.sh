@@ -1,5 +1,5 @@
 install_nix () {
-	apt install -y nix
+	sudo apt install -y nix
 }
 
 build () {
