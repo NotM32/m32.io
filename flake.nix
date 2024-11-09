@@ -1,5 +1,5 @@
 {
-  description = "static personal website";
+  description = "m32's static personal website";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
@@ -8,9 +8,8 @@
 
   outputs = inputs@{ self, flake-parts, ... }:
     flake-parts.lib.mkFlake { inherit inputs; } {
-      imports = [ ];
-
       systems = [ "x86_64-linux" "aarch64-linux" ];
+
       perSystem = { pkgs, self', ... }: {
         devShells = {
           default = (import ./shell.nix) {
@@ -18,11 +17,15 @@
             extraBuildInputs = [];
           };
         };
-      };
 
-      flake = {
-      };
+        packages = rec {
+          static = pkgs.callPackage ./default.nix {
+            inherit self pkgs;
+          };
 
+          default = static;
+        };
+      };
     };
 
   nixConfig = {
