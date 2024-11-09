@@ -58,7 +58,41 @@
                                shortRev = self.sourceInfo.shortRev or self.sourceInfo.dirtyShortRev;
                              });
 
+          dev-server = writeShellScript "dev-server"
+            ''
+              #!/bin/sh
+              fetch_data () {
+                         cp $(nix build .#data-file --no-link --print-out-paths) $PWD/.nix-data.json
+              }
+
+              cleanup () {
+                      local pids=$(jobs -pr)
+                      [ -n $pids ] && kill $pids
+              }
+
+              echo "Building and linking nix data file"
+              fetch_data
+
+              echo "Starting Tailwind watch process"
+	            tailwindcss -i sass/style.scss -o static/styles/main.css --watch &
+
+              echo "Starting Zola watch process"
+              zola serve &
+
+              while true; do
+                    fetch_data
+                    sleep 10
+              done;
+
+              trap "cleanup" SIGINT SIGTERM EXIT
+            '';
+
           default = static;
+        };
+
+        apps.default = {
+          type = "app";
+          program = "${self'.packages.dev-server}";
         };
 
         devShells.default = with pkgs;
