@@ -6,9 +6,36 @@
 
 @layer base {
 	article.article {
-		@apply font-serif;
 		@apply max-w-prose;
 		@apply mx-auto;
+	}
+	article.section {
+		@apply font-serif;
+		@apply antialiased;
+		@apply text-neutral-800;
+		@apply dark:text-neutral-100;
+		@apply p-4;
+
+		p {
+			@apply indent-4;
+			@apply text-pretty;
+			@apply hyphens-auto;
+			@apply leading-relaxed;
+			@apply break-words;
+
+			@apply tabular-nums;
+			@apply ordinal;
+			@apply slashed-zero;
+
+			@apply pb-4;
+
+			img {
+				@apply float-right;
+			}
+		}
+	}
+	article.article, article.section {
+		@apply font-serif;
 		@apply antialiased;
 		@apply text-neutral-800;
 		@apply dark:text-neutral-100;
@@ -32,30 +59,35 @@
 			@apply text-3xl;
 			@apply dark:text-white;
 			@apply font-semibold;
-			@apply pb-2;
+			@apply pb-1;
+			@apply pt-2;
 		}
 		h3 {
 			@apply text-2xl;
 			@apply dark:text-white;
 			@apply font-semibold;
-			@apply pb-2;
+			@apply pb-1;
+			@apply pt-2;
 		}
 		h4 {
 			@apply text-xl;
 			@apply dark:text-white;
 			@apply font-semibold;
-			@apply pb-2;
+			@apply pb-1;
+			@apply pt-2;
 		}
 		h5 {
 			@apply text-lg;
 			@apply dark:text-white;
 			@apply font-semibold;
-			@apply pb-2;
+			@apply pb-1;
+			@apply pt-2;
 		}
 		h6 {
 			@apply text-lg;
 			@apply dark:text-white;
 			@apply font-medium;
+			@apply pb-1;
 			@apply pb-2;
 		}
 		hr {
@@ -89,11 +121,10 @@
 		}
 		blockquote {
 			@apply opacity-80;
-			@apply bg-neutral-100;
+			@apply bg-neutral-200;
 			@apply dark:bg-neutral-800;
 			@apply border-l-8;
-			@apply border-neutral-800;
-			@apply dark:border-neutral-100;
+			@apply border-orange-800;
 			@apply mb-4;
 
 			p {
@@ -147,7 +178,6 @@
 
 					th {
 						@apply border-orange-600 bg-orange-700/10 px-2 py-1 mx-2;
-
 					}
 				}
 			}
@@ -160,6 +190,6 @@
 				}
 			}
 		}
-
 	}
+
 }

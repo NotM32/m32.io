@@ -9,3 +9,6 @@
 # nix
 result
 result/
+
+# css output
+static/styles/main.css
