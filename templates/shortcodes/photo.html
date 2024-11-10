@@ -23,7 +23,11 @@
 {% if class %}{% set classes = classes ~ " " ~ class %}{% endif %}
 
 {% set classes = classes ~ " transition hover:scale-[2]" %}
+
+{% if resize is not defined or resize == true %}
+{% set image = resize_image(path=src, op='fit_width', width=600) %}
+{% endif %}
 <img
 	{% if alt %}alt="{{alt}}"{% endif %}
-	{% if src %}src="{{get_url(path=src,cachebust=true)}}"{% endif %}
+	{% if src %}src="{{ image.url }}"{% endif %}
 	class="rounded shadow-lg {{classes}}" />
