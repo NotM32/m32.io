@@ -14,7 +14,7 @@ I interact with ARIN on a regular basis, and from an operational perspective, I 
 
 This year, I was able to attend the in person meeting as an 'ARIN Fellow'. What I've found to be a wonderful program for myself, and undoubtly for anyone else at any stage in their career.
 
-{{ photo(src='img/arin54fellows.jpg', align='center', alt='the ARIN54 fellows') }}
+{{ photo(src='articles/arin54/arin54fellows.jpg', align='center', alt='the ARIN54 fellows') }}
 
 As a smaller network operator, it's easy to be unaware about the things happening behind the scenes to keep a massive project like the internet working. Technicians who make use of standards put in place by organizations like ARIN, the NRO, ICANN, the IETF, and similar, may use these standards everyday and not know their origin. If you've heard of these meetings, you may not be aware of what exactly happens behind those doors.
 
@@ -22,17 +22,17 @@ As a smaller network operator, it's easy to be unaware about the things happenin
 
 That was me. From what I had gathered about ARIN meetings, there would be a decent group of IP resource holders and IP resouce users present. My business partners had always thought attending one of these would be a great place to meet prospective IP resource leasing clients. While I did meet quite a few people, I did find NANOG to be the spot to grow business connections.
 
-{{ photo(src='img/red_maple.jpg', align='left', alt='a beautiful red maple') }}
+{{ photo(src='articles/arin54/red_maple.jpg', align='left', alt='a beautiful red maple') }}
 
 I had been wanting to attend these conferences, though the cost and travel involved usually put it on the back burner for me. Funny enough, I had thought the ARIN fellowship consisted of solely a $350 stipend, and some education when applying. I expected to have to burden my business with the travel expense. I found out after selection, that ARIN covered everything and would send me to NANOG too :O
 
-{{ photo(src='img/toronto_skyline.jpg', align='right', alt='the toronto skyline') }}
+{{ photo(src='articles/arin54/toronto_skyline.jpg', align='right', alt='the toronto skyline') }}
 
 The ARIN fellows receive a great deal of primers, and education prior to the meeting. There is a mentor pairing among the group with members of the advisory council. I think this is great. It comes coupled with weekly sessions leading up to the meeting. I learned quite a bit from these sessions, and definitely feel like they helped me enter the meeting with an understanding of what would be happening. That helped me focus on gaining insight from those in the gathering. I wouldn't have to be asking questions about what was going on, and I had time to prepare some thoughts, questions and answers.
 
 The biggest piece of advice I can give to someone attending one of these conferences is, don't be a wallflower. Coming from a small business, where I'm the technical lead and there aren't many other likeminded people in my office, this was a great week. It didn't last long enough. It was amazing to meet so many intelligent engineers, and likeminded people. At NANOG, I made it my goal to meet as many relevant people as possible. It was tough, because the community is so great surrounding these groups.
 
-{{ photo(src='img/jonathan_hockey.jpg', align='left', alt='Jonathan Black shooting some pucks') }}
+{{ photo(src='articles/arin54/jonathan_hockey.jpg', align='left', alt='Jonathan Black shooting some pucks') }}
 
 I don't think I've ever enjoyed socializing as much in my life as I did at NANOG/ARIN. I made some great friends, and great business connections. I'm left with a feeling I have more to learn, and more to see from these groups. If you've ever thought about attending one of these meetings, just do it. If you can get the fellowship, and think you'll learn from it, do it.
 
@@ -41,6 +41,6 @@ If you plan to socialize, and just walk up to people, you'll have the best time.
 
 Above all, the people you meet there can turn out to be some of the best connections you'll have business, casual or otherwise. I was lucky enough to make friends with an attendee who flew 30 hours from Thailand to attend. His name was Viput, and he worked with a large IP resource company. He introduced me to his CEO, who gave me some great insight and arguments to take back to my leadership ;) - Viput and I did a lot of networking together, and backed eachother up in conversation. An incredibly genuine person, who left a lasting impression on me, and I hope we can meet again.
 
-{{ photo(src='img/me_viput_sc.jpg', align='center', alt='me and viput with the stanley cup') }}
+{{ photo(src='articles/arin54/me_viput_sc.jpg', align='center', alt='me and viput with the stanley cup') }}
 
 This was the kickoff to a long journey and commitment to these communities for me. The level of knowledge, experience, energy and invigoration you can gain from these events, from the fellowship program, is unmatched. I look forward to my future involvement, and continued participation.
