@@ -27,7 +27,14 @@
 {% if resize is not defined or resize == true %}
 {% set image = resize_image(path=src, op='fit_width', width=600) %}
 {% endif %}
-<img
-	{% if alt %}alt="{{alt}}"{% endif %}
-	{% if src %}src="{{ image.url }}"{% endif %}
-	class="rounded shadow-lg {{classes}}" />
+
+<a href="/{{ src }}">
+	<img
+		{% if alt %}alt="{{alt}}"{% endif %}
+		{% if image.url %}
+		src="{{ image.url }}"
+		{% elif src %}
+		src="{{ src }}"
+		{% endif %}
+		class="rounded shadow-lg {{classes}}" />
+</a>
