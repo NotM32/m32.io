@@ -12,7 +12,7 @@ I am an advocate for libre software and the support efforts of the [FSF](https:/
 Find me on [GitHub](https://github.com/notm32) and [LinkedIn](https://linkedin.com/in/m32).
 
 ## Photos
-{{ photo(src='img/headshot.jpg', align='left' clear=false, grid=true, alt='me with a blunderbuss at a tartan festival') }}
+{{ photo(src='img/headshot.jpg', align='left', clear=false, grid=true, alt='me with a blunderbuss at a tartan festival') }}
 
 {{ photo(src='img/eloped.jpg', align='right', clear=false, grid=true, alt='me and my wife at our elopement') }}
 
