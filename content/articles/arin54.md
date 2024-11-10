@@ -3,6 +3,8 @@ title = "My NANOG92/ARIN54 Experience"
 slug = "arin54"
 date = 2024-11-08
 description = "A recount of my experience as an ARIN fellow"
+[taxonomies]
+tags = ["networking", "career"]
 +++
 {{ photo(src='img/n92_2.jpg', align='left', alt='me eating breakfast at NANOG92') }}
 

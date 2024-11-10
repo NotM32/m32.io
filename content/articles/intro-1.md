@@ -3,6 +3,7 @@ title = "Intro Part 1"
 slug = "intro-1"
 date = 2024-09-09
 description = "Pellentesque tristique imperdiet tortor."
+draft = true
 [taxonomies]
 tags=["networking"]
 languages=["elixir", "rust"]
