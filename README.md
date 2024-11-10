@@ -1,8 +1,16 @@
 # m32.io
-This is my personal website
+This is my personal website. See it [here](https://m32.io)
 
 ## Usage
 The site may be built with `nix build`
+
+The `result/` folder will contain the static output. 
+
+## Deployment
+Deployment happens with a GitHub actions workflow that builds and uploads the deployment to CloudFlare
+pages.
+
+Why CloudFlare pages? It's free and seemed easy enough to setup.
 
 ## Development
 The local development server is started with `nix run` in this repo's root. This starts 3 processes:
