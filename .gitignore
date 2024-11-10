@@ -12,3 +12,4 @@ result/
 
 # css output
 static/styles/main.css
+static/processed_images
