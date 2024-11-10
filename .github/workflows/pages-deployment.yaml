@@ -21,3 +21,4 @@ jobs:
           projectName: m32io # e.g. 'my-project'
           directory: result # e.g. 'dist'
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
