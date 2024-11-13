@@ -14,11 +14,13 @@
 				<time datetime="{{ page.date }}" class="text-xs tabular-nums slashed-zero text-neutral-500">{{ page.date | date(format="%Y-%m-%d") }}</time>
 				<h3 class="text-gray-800 dark:text-gray-100 group-hover:text-neutral-600 dark:group-hover:text-neutral-400 font-semibold line-clamp-1">{{ page.title }}</h3>
 			</a>
+			<ul class="flex gap-2">
 			{% if page.taxonomies.tags %}
-			{% for tag in page.taxonomies.tags %}
-			<span class="bg-transparent text-orange-700 border border-orange-700 text-xs font-semibold px-2.5 py-0.5 rounded-sm">{{ tag }}</span>
-			{% endfor %}
+				{% for tag in page.taxonomies.tags %}
+				<li><span class="bg-transparent text-orange-700 border border-orange-700 text-xs font-semibold px-2.5 py-0.5 rounded-sm">{{ tag }}</span></li>
+				{% endfor %}
 			{% endif %}
+			</ul>
 		  </li>
 		  {% endfor %}
 	</ul>
