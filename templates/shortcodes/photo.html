@@ -25,7 +25,7 @@
 {% set classes = classes ~ " transition hover:scale-[2]" %}
 
 {% if resize is not defined or resize == true %}
-{% set image = resize_image(path=src, op='fit_width', width=600) %}
+{% set image = resize_image(path=src, op='fit_width', width=600, format='webp') %}
 {% endif %}
 
 <a href="/{{ src }}">
