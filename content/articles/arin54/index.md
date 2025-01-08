@@ -2,10 +2,13 @@
 title = "My NANOG92/ARIN54 Experience"
 slug = "arin54"
 date = 2024-11-08
+updated = 2025-01-07
 description = "A recount of my experience as an ARIN fellow"
 [taxonomies]
 tags = ["networking", "career"]
 +++
+*__Updated Jan. 7th:__ ARIN has republished this article to their blog. [See the post here!](https://www.arin.net/blog/2025/01/07/fellowship-experience-riley-oconnor/)*
+
 {{ photo(src='img/n92_2.jpg', align='left', alt='me eating breakfast at NANOG92') }}
 
 In the final weeks of October, I took a trip to Toronto to attend [NANOG92](https://nanog.org/events/nanog-92) and [ARIN54](https://arin.net/arin54). This was my first time attending either event in person. I've long been aware of NANOG through it's mailing list, and in my career I've had plenty of interaction with ARIN. I'm apprised of ARIN's policy development through various sources, and I have read some of the meeting minutes.
