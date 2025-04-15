@@ -1,6 +1,6 @@
 +++
 title = "Literate Programming for LLMs"
-slug = "literate-llms"
+slug = "literate-llm"
 date = 2025-04-14
 description = "Exploring a novel use case for Donald Knuth's literate programming style"
 
